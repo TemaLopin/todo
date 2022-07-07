@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <title>Document</title>
+    <title>To Do</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-    <div class="centre">
-    <div class="container-title">
-        <!-- <input type="text" class="input-title" placeholder="To Do List"> 
-        -->
-        <span class="input-title">TODO</span>
-        <p class="todotitle"></p>
-    </div>
-    <div class="container">
-        <div class="inputcol">
-            <input type="text" class="input input-title" placeholder="I want to...">
-            <button type="button" class="buttoninput"><i class="fa-solid fa-check"></i></button>
-        </div>
-        <div class="filter">
-            <button type="button" class="filterBtn fAll">ALL</button>
-            <button type="button" class="filterBtn fDone">DONE</button>
-            <button type="button" class="filterBtn fUndone">UNDONE</button>
-            <p style="padding-top: 10px;padding-left: 30px;"> SORT BY DATE</p>
-            <button type="button" class="filterBtn fUp">UP</button>
-            <button type="button" class="filterBtn fDown">DOWN</button>
-        </div>
-    </div>
-    <div class="todolist">
+        <div class="bodyContainer">
+            <h1>ToDo</h1>
+            <div class="newTask">
+                <input type="text" class="createTask" placeholder = "I want to..." value="">
+                <button class="createTaskBtn" type="button"><span class="icon-success"></span></button>
+            </div>
+            <div class="filter">
+                <button class="filtersBtn active_filter" id="all">All</button>
+                <button class="filtersBtn" id="done">Done</button>
+                <button class="filtersBtn" id="undone">Undone</button>
+                <div class="filters dateFilter">
+                    <p id="sortDate">Sort by date</p>
+                    <div class="arrows">
+                        <svg width="10" height="13" viewBox="0 0 10 13" fill="black" xmlns="http://www.w3.org/2000/svg" class="active_arrow arrow">
+                            <path d="M0 4.38596L4.38597 0H5.61404L10 4.38596L8.77193 5.63158L5.87719 2.75439V12.5263H4.12281V2.75439L1.22807 5.64912L0 4.38596Z"/>
+                        </svg>
+                        <svg class = "arrow" width="10" height="13" viewBox="0 0 10 13" fill="black" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 8.14034L5.61403 12.5263L4.38596 12.5263L-6.32936e-07 8.14034L1.22807 6.89473L4.12281 9.77192L4.1228 -9.60619e-06L5.87719 -9.75956e-06L5.87719 9.77192L8.77193 6.87718L10 8.14034Z"/>
+                        </svg>
+                            
+                    </div>
+                </div>
+            </div>
 
-    </div></div>
+            <ul class="tasks">
+            </ul>
+
+            <ul id="pagination">
+                <li class="active_page">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+    <script src="./delete.js"></script>
+    <script src="./filter.js"></script>
+    <script src="./input.js"></script>
+    <script src="./paginator.js"></script>
 </body>
-
 </html>

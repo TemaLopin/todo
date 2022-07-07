@@ -1,149 +1,260 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.centre {
-    border: 1px solid gray;
-    border-radius: 5px;
-    min-height: 500px;
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 30px;
-    background: url(https://cdn.wallpaperhub.app/cloudcache/7/4/f/3/d/5/74f3d51cbec9db78da32e103de1b28538af1b76a.jpg);
-}
 body {
-    background-color: skyblue;
-}
-.container-title {
-    display: grid;
-    column-gap: 10px;
-    grid-template-columns: 25% 5%;
-    justify-content: center;
-    margin-top: 10px;
+    background-color: rgb(73, 128, 94);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.input-title {
-    min-height: 50px;
-    padding: 0 10px;
-    font-size: 40px;
-    text-align: center;
+.bodyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80%;
+    background-color: rgb(178, 235, 209);
+    box-shadow: 0 0 20px #292929;
+}
+li {
+    list-style-type: none
+}
+.newTask {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    
+}
+.createTask {
+    border: 1px solid #868686;
     border-radius: 10px;
-    border-color: #333;
+    padding: 9px 24px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    width: 60%;
+    box-shadow: 0 0 10px #292929;
+}
+.createTaskBtn {
+    width: 40px;
+    height: 22px;
+    margin-left: 4px;
+    margin-bottom: 20px;
+    background: none;
+    border: none;
     
 }
 
-.input-title:focus {
-    outline: none;
+.icon-success {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	background-color: #52b358;
+	border-radius: 50%;
+    
 }
 
-.todotitle {
-    font-size: 20px;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    font-weight: bold;
+.icon-success::after {
+	content: '✓';
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
 }
 
-.inputcol {
-    display: grid;
-    column-gap: 2px;
-    grid-template-columns: 60% 10%;
-    min-height: 50px;
-    justify-content: center;
-    margin-top: 10px;
+.filters {
+    display: flex;
+    align-items: center;
 }
 
-.input {
-    border-radius: 10px;
-    border-color: #333;
-    font-size: 20px;
-    padding: 0 10px;
+.filters button {
+    background-color: wheat;
+    margin-left: 5px;
+    border: 0,5px solid ;
+    
 }
 
-.input:focus {
-    outline: none;
+.dateFilter {
+    margin-left: 10px;
+    margin-top: 8px;  
 }
-.filter {
+
+.dateFilter p {
+    margin-right: 5px; 
+}
+
+.arrow {
+    margin: 0px 5px;
+}
+
+.tasks {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0;
+}
+
+.task_body {
+    display: flex;
+  
+}
+
+.create_new_task_body::placeholder {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #868686;
+  }
+
+.side button {
+    margin: 10px;
+}
+
+.left_side {
+    margin-left: 20px;
+    width: 10%;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin-right: 3%;
+}
+
+.right_side {
     width: 80%;
-    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filter {
+    margin-bottom: 33px;
+    display: flex;
     align-items: center;
+    width: 60%;
+    justify-content: center;;
+}
+  
+.filters_by_date {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+  
+.filters_by_date p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin-right: 19px;
+}
+  
+.active_arrow {
+fill: #c92121;
+}
+
+.filtersBtn {
+background: rgb(73, 128, 94);
+border-radius: 20%;
+padding: 8px 3% 6px;
+text-align: center;
+font-weight: 600;
+font-size: 14px;
+line-height: 21px;
+color: #000000;
+border: 1px solid;
+}
+
+.filtersBtn {
+margin-left: 14px;
+}
+
+.active_filter {
+color: #f8f9ff;
+background-color: #c92121;
+border-color: #c92121;
+}
+
+
+
+.reversed {
+display: flex;
+flex-direction: column-reverse;
+}
+
+
+.side {
+display: flex;
+align-items: center;
 
 }
 
-.filterBtn {
-    border-radius: 5px;
-    border-color: #333;
-    background-color: white;
-    font-size: 18px;
-    padding: 2px;
-}
-.buttoninput {
-    border-radius: 10px;
-    border-color: #333;
-    background-color: white;
-    font-size: 20px;
+.donebtn {
+border: 1px solid #292929;
+
+background: none;
+border-radius: 50%;
+padding: 4px 4px;
+margin-right: 13px;
 }
 
-.buttoninput:hover {
-    background-color: #8f8acc;
-    color: white;
+.donebtn:hover {
+border: 1px solid #c92121;
 }
 
-.todolist {
-    margin-top: 20px;
+.date {
+font-size: 12px;
+line-height: 18px;
+color: #000000;
 }
 
-.itemall {
-    display: grid;
-    grid-template-columns: 60% 5% 5%;
-    justify-content: center;
-    margin-bottom: 2px;
+.delete_task {
+background: none;
+outline: none;
+border: none;
+margin-left: auto;
+margin-right: 20px;
 }
 
-.item {
-    background-color: white;
-    min-height: 50px;
-    word-wrap: break-word;
-    word-break: break-all;
-    border-radius: 10px 0 0 10px;
-    border-color: #333;
-    font-size: 20px;
-    display: grid;
-    align-content: center;
-    padding: 10px 10px;
+.delete_task:hover {
+stroke: #c92121;
 }
 
-.check-button, .trash-button {
-    min-height: 50px;
-    background-color: white;
-    border: none;
-    font-size: 15px;
+.done {
+background-color: #c92121;
+border-color: #c92121;
 }
 
-.trash-button {
-    border-radius: 0 10px 10px 0;
+#pagination {
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
-.check-button:hover {
-    background-color: #37b3cc;
-    color: white;
+#pagination li {
+font-size: 16px;
+padding: 3px 22px;
+border: 0.5px solid #292929;
+box-shadow: 0 0  5px inset  #292929;
+border-radius: 3px;
+margin-top: 50px;
+list-style-type: none;
 }
 
-.trash-button:hover {
-    background-color: #6b73c1;
-    color: white;
+#pagination li + li {
+margin-left: 12px;
 }
 
-.checklist {
-    text-decoration: line-through;
+#pagination li:hover {
+border-color: #c92121;
+
 }
 
-.fa-check, .fa-trash {
-    pointer-events: none;
+.active_page {
+background: #c92121;
+color: #f8f9ff;
 }
+
+
